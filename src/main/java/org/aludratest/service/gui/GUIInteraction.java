@@ -85,6 +85,15 @@ public interface GUIInteraction extends Interaction {
             OptionLocator optionLocator,
             @TechnicalArgument int taskCompletionTimeout);
 
+    /** Clears the Element found with the locator.
+     * @param elementType the type of the related GUI element to log
+     * @param elementName the name of the related GUI element to log
+     * @param locator to locate one specific inputfield in the application under test. An inputfield is any GUI element which
+     *            accepts user inputs.
+     * @param taskCompletionTimeout the maximum number of milliseconds to wait for the completion of the task */
+    void clear(@ElementType String elementType, @ElementName String elementName, @TechnicalLocator GUIElementLocator locator,
+            @TechnicalArgument int taskCompletionTimeout);
+
     /** Types in some text without conversion/manipulation of the passed through text. The content of the locator will be deleted,
      * if the expected text is not set.
      * @param elementType the type of the related GUI element to log

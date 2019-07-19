@@ -40,6 +40,11 @@ public class InputFieldImpl extends AbstractElement<InputField> implements Value
     }
 
     @Override
+    public void clear() {
+        perform().clear(elementType, elementName, getLocator(), taskCompletionTimeout);
+    }
+
+    @Override
     public String getText() {
         return perform().getInputFieldValue(elementType, elementName, getLocator());
     }

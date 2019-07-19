@@ -31,6 +31,9 @@ public interface InputField extends Element<InputField>, ValueComponent {
      */
     public void enter(String text);
 
+    /** Clears text in the InputField. */
+    public void clear();
+
     /** Asserts that the element is editable, i.e. text can be entered. */
     public void assertEditable();
 
