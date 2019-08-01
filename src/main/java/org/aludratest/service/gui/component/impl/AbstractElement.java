@@ -149,6 +149,11 @@ public abstract class AbstractElement<E extends Element<E>> extends AbstractGUIC
     }
 
     @Override
+    public void scrollIntoView() {
+        perform().scrollIntoView(elementType, elementName, getLocator());
+    }
+
+    @Override
     public void doubleClick() {
         perform().doubleClick(elementType, elementName, getLocator(), taskCompletionTimeout);
     }

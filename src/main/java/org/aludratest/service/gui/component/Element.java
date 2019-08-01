@@ -103,6 +103,9 @@ public interface Element<E extends Element<E>> extends GUIComponent {
     /** Sets the focus on this element */
     public void focus();
 
+    /** scroll to this element */
+    public void scrollIntoView();
+
     /** Double clicks the element. */
     public void doubleClick();
 

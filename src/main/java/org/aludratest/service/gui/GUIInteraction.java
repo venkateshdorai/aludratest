@@ -187,6 +187,13 @@ public interface GUIInteraction extends Interaction {
      * @param locator of the element which shall get the focus */
     void focus(@ElementType String elementType, @ElementName String elementName, @TechnicalLocator GUIElementLocator locator);
 
+    /** Scroll Into View to an element within DOM.
+     * @param elementType the type of the related GUI element to log
+     * @param elementName the name of the related GUI element to log
+     * @param locator of the element which needs to be located within DOM */
+    void scrollIntoView(@ElementType String elementType, @ElementName String elementName,
+            @TechnicalLocator GUIElementLocator locator);
+
     /** Presses a key on the keyboard. Available key codes depend on service implementation.
      * @param keycode is the key which shall be pressed. */
     void keyPress(int keycode);
