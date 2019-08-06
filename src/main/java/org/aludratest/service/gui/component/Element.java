@@ -106,6 +106,9 @@ public interface Element<E extends Element<E>> extends GUIComponent {
     /** scroll to this element */
     public void scrollIntoView();
 
+    /** get css value of this element */
+    public String getCssValue(String propertyName);
+
     /** Double clicks the element. */
     public void doubleClick();
 

@@ -194,6 +194,11 @@ public interface GUIInteraction extends Interaction {
     void scrollIntoView(@ElementType String elementType, @ElementName String elementName,
             @TechnicalLocator GUIElementLocator locator);
 
+    /** Gets the cssValue of the element
+     * @param locator points to one element
+     * @return the cssvalue of the specified property */
+    String getCssValue(String propertyName, @TechnicalLocator GUIElementLocator locator);
+
     /** Presses a key on the keyboard. Available key codes depend on service implementation.
      * @param keycode is the key which shall be pressed. */
     void keyPress(int keycode);
