@@ -154,6 +154,11 @@ public abstract class AbstractElement<E extends Element<E>> extends AbstractGUIC
     }
 
     @Override
+    public String getCssValue(String propertyName) {
+        return perform().getCssValue(propertyName, getLocator());
+    }
+
+    @Override
     public void doubleClick() {
         perform().doubleClick(elementType, elementName, getLocator(), taskCompletionTimeout);
     }
